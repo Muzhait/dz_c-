@@ -14,10 +14,6 @@ while (k <= n)
     if (k % 2 == 0)
     {
         Console.Write($"{k}; ");
-        k++;
-    }
-else 
-{
+       }
     k++;
-}
 }

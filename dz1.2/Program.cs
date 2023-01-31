@@ -15,11 +15,11 @@ int b = int.Parse(Console.ReadLine()!);
 Console.Write("Введите число c; ");
 int c = int.Parse(Console.ReadLine()!);
 
-if (a > b & a > c)
+if (a > b && a > c)
 {
     Console.WriteLine($"Максимальное число {a}");
 }
-else if (b > a & b > c)
+else if (b > a && b > c)
 {
     Console.WriteLine($"Максимальное число {b}");
 }
