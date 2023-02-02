@@ -5,7 +5,7 @@ Console.Clear();
 
 Console.Write("Введите число : ");
 int num = int.Parse(Console.ReadLine()!);
-int k = 1;
+
 while (num > 999)
 {
     num = num / 10;

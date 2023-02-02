@@ -3,21 +3,20 @@
 
 Console.Clear();
 
-Console.Write("Введите число : ");
-int num = int.Parse(Console.ReadLine());
-int k = 1;
-while (num > 999)
+Console.Write("Enter number: ");
+int number = int.Parse(Console.ReadLine()!);
+
+while (number > 999)
 {
-    num = num / 10;
+    number = number / 10;
 }
 
-if (num > 99)
+if (number < 99)
 {
-    num = num % 10;
-    Console.WriteLine(num);
+    Console.WriteLine($"There is no third number"!);
 }
 else
 {
-    Console.WriteLine("Число не содержит третью цифру");
+    number = number % 10;
+    Console.WriteLine(number);
 }
-return 0;
