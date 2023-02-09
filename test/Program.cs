@@ -1,22 +1,44 @@
 ﻿// Задача 13: Напишите программу, которая выводит третью
 // цифру заданного числа или сообщает, что третьей цифры нет.
 
-Console.Clear();
+Console.WriteLine("Введите размер массива  ");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("массив: ");
+PrintArray(numbers);
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
 
-Console.Write("Enter number: ");
-int number = int.Parse(Console.ReadLine()!);
-
-while (number > 999)
+for (int z = 0; z < numbers.Length; z++)
 {
-    number = number / 10;
+    if (numbers[z] > max)
+        {
+            max = numbers[z];
+        }
+    if (numbers[z] < min)
+        {
+            min = numbers[z];
+        }
 }
 
-if (number < 99)
+Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+void FillArrayRandomNumbers(double[] numbers)
 {
-    Console.WriteLine($"There is no third number"!);
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 1;
+        }
 }
-else
+void PrintArray(double[] numbers)
 {
-    number = number % 10;
-    Console.WriteLine(number);
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
 }
