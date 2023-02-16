@@ -3,7 +3,7 @@
 
 Console.Clear();
 
-double[] GetArray(int size, int minValue, int maxValue)
+double[] GetArray(double size, double minValue, double maxValue)
 {
     double[] array = new double[6];
     Random rand = new Random();
