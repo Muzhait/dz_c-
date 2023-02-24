@@ -16,7 +16,7 @@ void FillArray(int[,,] arr)
             for (int k = 0; k < arr.GetLength(2); k++)
             {
                 arr[k, i, j] += count;
-                count += 3;
+                count += 1;
             }
         }
     }

@@ -51,7 +51,7 @@ void NumberRowMinSumElements(int[,] array)
         }
         sumRow = 0;
     }
-    Console.Write($"Наименьшая сумма элементов находится {minSumRow + 1} строке");
+    Console.Write($"Наименьшая сумма элементов находится в {minSumRow + 1} строке");
 }
 
 Console.Clear();

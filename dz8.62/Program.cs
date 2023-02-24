@@ -39,7 +39,7 @@ void PrintArray(int[,] array)
 }
 
 Console.Clear();
-int size = 4;
+int size = 5;
 int[,] array2D = new int[size, size];
 FillArraySpiral(array2D, size);
 PrintArray(array2D);
